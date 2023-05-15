@@ -5,7 +5,7 @@ import './ExpensesList.css';
 
 const ExpensesList = (props) => {
   if (props.items.length === 0) {
-    return <h2 className='expenses-list__fallback'>Found no expenses.</h2>;
+    return <h2 className='expenses-list__fallback'>Not found</h2>;
   }
 
   return (
@@ -16,6 +16,8 @@ const ExpensesList = (props) => {
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
+          total={expense.total}
+          file={expense.file}
         />
       ))}
     </ul>
